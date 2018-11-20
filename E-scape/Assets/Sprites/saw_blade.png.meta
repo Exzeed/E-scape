@@ -93,9 +93,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 395
-        height: 396
+        y: 2
+        width: 198
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,7 +103,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 777904d018403e549ae240835c18c76c
+      spriteID: a165d26fde9066840abc3865f5a9c67a
       vertices: []
       indices: 
       edges: []
@@ -112,10 +112,10 @@ TextureImporter:
       name: saw_blade_1
       rect:
         serializedVersion: 2
-        x: 403
-        y: 4
-        width: 397
-        height: 397
+        x: 201
+        y: 2
+        width: 199
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,7 +123,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a7a27db507f2624e9fc851f7cb8a9a6
+      spriteID: 7b935dd2a13a2bf448bf07969fd51b0a
       vertices: []
       indices: 
       edges: []
@@ -132,10 +132,10 @@ TextureImporter:
       name: saw_blade_2
       rect:
         serializedVersion: 2
-        x: 806
-        y: 6
-        width: 396
-        height: 395
+        x: 402
+        y: 2
+        width: 199
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,7 +143,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bf0f852cd49dc0468d62eea086fc18f
+      spriteID: f29c7510c51d9e240997dc45b9bbd27f
       vertices: []
       indices: 
       edges: []
@@ -152,10 +152,10 @@ TextureImporter:
       name: saw_blade_3
       rect:
         serializedVersion: 2
-        x: 1211
-        y: 3
-        width: 399
-        height: 398
+        x: 605
+        y: 2
+        width: 200
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd9e92cf5bfa83f4395f17ea746ceee2
+      spriteID: f12983880a1179849bae4540e1772dfd
       vertices: []
       indices: 
       edges: []
@@ -172,10 +172,10 @@ TextureImporter:
       name: saw_blade_4
       rect:
         serializedVersion: 2
-        x: 1620
-        y: 7
-        width: 395
-        height: 394
+        x: 809
+        y: 3
+        width: 198
+        height: 197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,7 +183,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbf5451b62d86384cbebece43585896e
+      spriteID: cc564ae80fcd6f646b3c0b62c9afa76d
       vertices: []
       indices: 
       edges: []

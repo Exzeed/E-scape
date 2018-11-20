@@ -7,6 +7,8 @@ TextureImporter:
     21300004: basic_robot_2
     21300006: basic_robot_3
     21300008: basic_robot_idle
+    21300010: basic_robot_4
+    21300012: basic_robot_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -97,13 +99,13 @@ TextureImporter:
         width: 63
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0bdbca168f761d4797d4b77977bac9e
+      spriteID: 45e32aaf3a648294c8c59dfdbca0fc89
       vertices: []
       indices: 
       edges: []
@@ -117,13 +119,13 @@ TextureImporter:
         width: 52
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0209faf5410fcf43a39ff5b6ea4b5fa
+      spriteID: a488e910830fbb945b9f44e47df358e4
       vertices: []
       indices: 
       edges: []
@@ -134,16 +136,16 @@ TextureImporter:
         serializedVersion: 2
         x: 125
         y: 0
-        width: 61
+        width: 29
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e36d8b5586c347c42b5bdc18bf02c2a8
+      spriteID: 1a3579e0a960df041a9b738b6867a0f1
       vertices: []
       indices: 
       edges: []
@@ -152,38 +154,58 @@ TextureImporter:
       name: basic_robot_3
       rect:
         serializedVersion: 2
-        x: 191
+        x: 159
         y: 0
-        width: 54
+        width: 61
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36fc6adf5b8bdd941a6b2d9bdfe5c619
+      spriteID: 9012faf2d14a7d241a834f294f5b203a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basic_robot_idle
+      name: basic_robot_4
       rect:
         serializedVersion: 2
-        x: 250
+        x: 225
         y: 0
-        width: 29
+        width: 54
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13520dd96de131843bf536f520b01bea
+      spriteID: 61ed5b91eb73b744c835ed95a27b51a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic_robot_5
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 29
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ffbe7ae010919419a1cd1315c62df4
       vertices: []
       indices: 
       edges: []

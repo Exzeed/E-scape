@@ -96,8 +96,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 79
-        height: 181
+        width: 95
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,7 +105,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f79ac23d15577a64fb4a775a28d5e391
+      spriteID: dc4bd36a83b29a246805e9d83ed7d037
       vertices: []
       indices: 
       edges: []
@@ -114,10 +114,10 @@ TextureImporter:
       name: blue_robot_1
       rect:
         serializedVersion: 2
-        x: 89
+        x: 107
         y: 0
-        width: 98
-        height: 181
+        width: 115
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0d26bf58c80d04418478e2f4ab1455c
+      spriteID: d4a3ccda9ff04c04f81fc68b0f27827d
       vertices: []
       indices: 
       edges: []
@@ -134,10 +134,10 @@ TextureImporter:
       name: blue_robot_2
       rect:
         serializedVersion: 2
-        x: 197
+        x: 255
         y: 0
-        width: 117
-        height: 181
+        width: 119
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ced15ce634a7cdd44bf1bd8221a8b026
+      spriteID: a4c3e8521425d5941b0896ca574af866
       vertices: []
       indices: 
       edges: []
@@ -154,10 +154,10 @@ TextureImporter:
       name: blue_robot_3
       rect:
         serializedVersion: 2
-        x: 322
+        x: 386
         y: 0
-        width: 97
-        height: 181
+        width: 117
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a53eedc8ca5b1944881f000964ed133
+      spriteID: d911db853339b83498a73b7bb2017ede
       vertices: []
       indices: 
       edges: []
@@ -174,10 +174,10 @@ TextureImporter:
       name: blue_robot_4
       rect:
         serializedVersion: 2
-        x: 430
+        x: 515
         y: 0
-        width: 95
-        height: 181
+        width: 115
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42960f74585ea4d479e6d87b7bbf61ae
+      spriteID: 132413538c7cc3347b8be3ee7abda4ef
       vertices: []
       indices: 
       edges: []
@@ -194,10 +194,10 @@ TextureImporter:
       name: blue_robot_5
       rect:
         serializedVersion: 2
-        x: 537
+        x: 644
         y: 0
-        width: 79
-        height: 181
+        width: 96
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,27 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0560b5680077a94bbfda9132b1fa9fe
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_robot_6
-      rect:
-        serializedVersion: 2
-        x: 642
-        y: 0
-        width: 54
-        height: 181
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39acb11947309ee46959abaffdbdf1d9
+      spriteID: a0c64d2f4547d654ca1b74cb3e250317
       vertices: []
       indices: 
       edges: []
