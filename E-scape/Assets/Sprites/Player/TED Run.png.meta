@@ -1,17 +1,23 @@
 fileFormatVersion: 2
-guid: 44976e9c75083bf4886c18d1f8319dc7
+guid: a7f178370944f104c8fa8b5cf650f367
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Idle_0
-    21300002: Idle_1
-    21300004: Idle_2
-    21300006: Idle_3
-    21300008: Idle_4
-    21300010: Idle_5
-    21300012: Idle_6
-    21300014: Idle_7
-    21300016: Idle_8
-    21300018: Idle_9
+    21300000: Run_0
+    21300002: Run_1
+    21300004: Run_2
+    21300006: Run_3
+    21300008: Run_4
+    21300010: Run_5
+    21300012: Run_6
+    21300014: Run_7
+    21300016: TED Run_0
+    21300018: TED Run_1
+    21300020: TED Run_2
+    21300022: TED Run_3
+    21300024: TED Run_4
+    21300026: TED Run_5
+    21300028: TED Run_6
+    21300030: TED Run_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -94,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: TED Run_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 275
-        height: 468
+        y: 8
+        width: 128
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,19 +114,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6a58e6e90cf2d34695cdc11517cbe59
+      spriteID: 0b716c1b81f4baf4bbe7fb94e64a8025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: TED Run_1
       rect:
         serializedVersion: 2
-        x: 282
-        y: 0
-        width: 276
-        height: 468
+        x: 134
+        y: 2
+        width: 128
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b116e83ef9a05b4d92a24d833a51bb1
+      spriteID: 776b7385071878149be0713ece265930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: TED Run_2
       rect:
         serializedVersion: 2
-        x: 575
-        y: 0
-        width: 275
-        height: 468
+        x: 268
+        y: 16
+        width: 164
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,19 +154,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 949c57e8663ee2a43b09149440685d6e
+      spriteID: 52e2a455dc24f114cbe31cae73dc2485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: TED Run_3
       rect:
         serializedVersion: 2
-        x: 857
-        y: 0
-        width: 277
-        height: 468
+        x: 435
+        y: 10
+        width: 155
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 775f414959ae61d46a6430cd53fb26ac
+      spriteID: 29d0aa888c793b64fb6e5aa819487b1b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_4
+      name: TED Run_4
       rect:
         serializedVersion: 2
-        x: 1141
-        y: 0
-        width: 275
-        height: 468
+        x: 595
+        y: 10
+        width: 149
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,19 +194,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 220054ba18dac5a4c955f7473f9f9172
+      spriteID: 0a973ff0628af9e45b5cd43f130890f3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_5
+      name: TED Run_5
       rect:
         serializedVersion: 2
-        x: 1423
+        x: 755
         y: 0
-        width: 277
-        height: 468
+        width: 169
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,19 +214,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d087bb387966c344b23957f2d9b742c
+      spriteID: 966f974c67234664aa1a162d07672295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_6
+      name: TED Run_6
       rect:
         serializedVersion: 2
-        x: 1717
-        y: 0
-        width: 275
-        height: 468
+        x: 941
+        y: 12
+        width: 183
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,19 +234,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a48af77da182a1e4c9a9829356e7ee00
+      spriteID: a1bd385ac0588464abdf845b442c16c9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_7
+      name: TED Run_7
       rect:
         serializedVersion: 2
-        x: 2010
-        y: 0
-        width: 277
-        height: 468
+        x: 1154
+        y: 9
+        width: 157
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,47 +254,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aca76b71b5b20bd49a1d11547f5579b2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_8
-      rect:
-        serializedVersion: 2
-        x: 2305
-        y: 0
-        width: 275
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cd006296e1242d4ea1a5cac52c5a7f1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_9
-      rect:
-        serializedVersion: 2
-        x: 2587
-        y: 0
-        width: 275
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fcb4480a9b16e54f89c4743b0b7c77a
+      spriteID: 0da3dae57763bda48b24c2a759f47b92
       vertices: []
       indices: 
       edges: []
@@ -296,7 +262,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: aa7792972bb55cc46a7645b40f33f3b4
+    spriteID: cbff1d1cd6472844fbe34fb53d186fdb
     vertices: []
     indices: 
     edges: []
