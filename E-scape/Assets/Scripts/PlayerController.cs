@@ -71,4 +71,11 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "Platform")
             grounded = true;
     }
+
+    //TEMPORARY
+    void OnTriggerEnter2D(Collider2D trigger)
+    {
+        if (trigger.gameObject.tag == "Exit")
+            Debug.Log("CONGRATULATIONS!!! YOU REACHED THE END!");
+    }
 }
