@@ -10,15 +10,11 @@ public class PlayerController : MonoBehaviour {
 
     private float moveX;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update ()
     {
         PlayerMove();
+        PlayerRaycast();
 	}
 
     void PlayerMove()
@@ -68,14 +64,31 @@ public class PlayerController : MonoBehaviour {
     {
         //Debug.Log("Collided with " + collision.collider.name);
         //when player is on an object tagged as "Platform" bool = true
-        if (collision.gameObject.tag == "Platform")
+       if (collision.gameObject.tag == "Platform")
             grounded = true;
     }
 
-    //TEMPORARY
-    void OnTriggerEnter2D(Collider2D trigger)
+    void PlayerRaycast()
     {
-        if (trigger.gameObject.tag == "Exit")
-            Debug.Log("CONGRATULATIONS!!! YOU REACHED THE END!");
+        //shoots a ray downwards
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+
+        if(hit.collider != null && hit.distance < 1.2f && hit.collider.tag == "Enemy")
+        {
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 150);
+
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
+            hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            hit.collider.gameObject.GetComponent<EnemyController>().enabled = false;
+
+            //Destroy (hit.collider.gameObject);
+        }
+
+        /* if (hit.collider != null && hit.distance < 1.2f && hit.collider.tag == "Platform")
+         {
+             grounded = true;
+         } */
     }
 }

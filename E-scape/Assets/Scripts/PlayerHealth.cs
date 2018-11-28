@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour {
     void Die ()
     {
         //resets scene
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("TestLevel");
         //Debug.Log("Player Fell");
         //yield return new WaitForSeconds(2);
         //Debug.Log("Player Died");
