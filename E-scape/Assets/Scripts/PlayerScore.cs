@@ -12,6 +12,11 @@ public class PlayerScore : MonoBehaviour {
     public GameObject playerScoreUI;
     public Text clearText;
 
+    void Start()
+    {//For testing
+        DataManagement.manageData.LoadData();
+    }
+
     // Update is called once per frame
     void Update () {
         //reduce timeLeft by deltaTime (per frame)
@@ -35,12 +40,18 @@ public class PlayerScore : MonoBehaviour {
             gameObject.GetComponent<PlayerController>().enabled = false;
             SpriteRenderer mySpriteRenderer = GetComponent<SpriteRenderer>();
             mySpriteRenderer.sortingLayerName = "Default";
+
+            //DataManagement.manageData.SaveData();
         }
     }
 
     void CountScore()
     {
+        //Debug.Log("Data says high score is currently " + DataManagement.manageData.highScore);
         playerScore = playerScore + (int)(timeLeft * 10);
+        DataManagement.manageData.highScore = playerScore + (int)(timeLeft * 10);
         //Debug.Log (playerScore);
+        DataManagement.manageData.SaveData();
+        //Debug.Log("After adding the score to DataManagement, Data says high score is currently " + DataManagement.manageData.highScore);
     }
 }
