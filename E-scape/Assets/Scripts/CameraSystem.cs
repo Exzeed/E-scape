@@ -9,13 +9,19 @@ public class CameraSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.FindWithTag ("Player");
+        if (GameObject.FindWithTag("Player") != null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
 	}
-	
-	// LateUpdate is called at the end of the Update() cycle
-	void LateUpdate () {
-        float x = Mathf.Clamp(player.transform.position.x, xMin, xMax);
-        float y = Mathf.Clamp(player.transform.position.y, yMin, yMax);
-        gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
+
+    // LateUpdate is called at the end of the Update() cycle
+    void LateUpdate() {
+        if (GameObject.FindWithTag("Player") != null)
+        {
+            float x = Mathf.Clamp(player.transform.position.x, xMin, xMax);
+            float y = Mathf.Clamp(player.transform.position.y, yMin, yMax);
+            gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
+        }
     }
 }

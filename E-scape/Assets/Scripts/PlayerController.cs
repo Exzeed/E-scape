@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public int speed = 1;
     public int jumpPower = 50;
+    public float distanceToBottomofPlayer = 1.2f;
     public bool grounded;
 
     private float moveX;
@@ -71,22 +72,21 @@ public class PlayerController : MonoBehaviour {
     void PlayerRaycast()
     {
         //shoots a ray downwards
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+        RaycastHit2D rayDown = Physics2D.Raycast(transform.position, Vector2.down);
 
-        if(hit.collider != null && hit.distance < 1.2f && hit.collider.tag == "Enemy")
+        if(rayDown.collider != null && rayDown.distance < distanceToBottomofPlayer && rayDown.collider.tag == "Enemy")
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 150);
-
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
-            hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            hit.collider.gameObject.GetComponent<EnemyController>().enabled = false;
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
+            rayDown.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            rayDown.collider.gameObject.GetComponent<EnemyController>().enabled = false;
 
             //Destroy (hit.collider.gameObject);
         }
 
-        /* if (hit.collider != null && hit.distance < 1.2f && hit.collider.tag == "Platform")
+        /* if (rayDown.collider != null && rayDown.distance < distanceToBottomofPlayer && rayDown.collider.tag == "Platform")
          {
              grounded = true;
          } */

@@ -43,6 +43,11 @@ public class PlayerScore : MonoBehaviour {
 
             //DataManagement.manageData.SaveData();
         }
+
+        /*if (trigger.gameObject.tag == "Enemy")
+        {
+            playerScore += 30;
+        }*/
     }
 
     void CountScore()
