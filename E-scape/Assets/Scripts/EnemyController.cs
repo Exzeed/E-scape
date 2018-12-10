@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour {
 
     public int enemySpeed, xMoveDirection;
     public float detectionSensor;
+    public bool restart = false;
+    public Text endText;
+    public Text restartText;
+    public GameObject explosion;
 
 	// Update is called once per frame
 	void Update () {
@@ -18,9 +23,23 @@ public class EnemyController : MonoBehaviour {
             Flip();
             if (hit.collider.tag == "Player")
             {
-                SceneManager.LoadScene("TestLevel");
+                hit.collider.gameObject.GetComponent<PlayerScore>().pauseTime = true;
+                endText.color = Color.red;
+                endText.text = "Game Over";
+                hit.collider.gameObject.GetComponent<PlayerController>().enabled = false;
+                hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                SpriteRenderer mySpriteRenderer = hit.collider.GetComponent<SpriteRenderer>();
+                mySpriteRenderer.sortingLayerName = "Default";
+                restart = true;
+                restartText.text = "Press 'R' to restart.";
+
                 //Destroy(hit.collider.gameObject);
             }
+        }
+        if (restart == true)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+                SceneManager.LoadScene("TestLevel");
         }
 	}
 

@@ -78,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04975891, y: -0.01966095}
+  m_Offset: {x: -0.027002573, y: -0.025347233}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -89,7 +89,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1377916, y: 2.313012}
+  m_Size: {x: 1.092279, y: 2.2788951}
   m_EdgeRadius: 0
 --- !u!95 &95370995816804224
 Animator:
@@ -122,8 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   jumpPower: 380
-  distanceToBottomofPlayer: 1.2
+  distToPlayerBot: 1.25
   grounded: 0
+  explosion: {fileID: 0}
 --- !u!114 &114464238064922512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,9 +137,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
+  pauseTime: 0
+  restart: 0
+  clear: 0
   timeLeftUI: {fileID: 0}
   playerScoreUI: {fileID: 0}
-  clearText: {fileID: 0}
+  explosion: {fileID: 1044728376080116, guid: 83e3bed3b49e96c458f0f17974100795, type: 2}
+  endText: {fileID: 0}
+  highscoreText: {fileID: 0}
+  restartText: {fileID: 0}
+  menuText: {fileID: 0}
 --- !u!114 &114840097853196282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45772967e9c56cf478fb3d6fe9822d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restart: 0
+  endText: {fileID: 0}
+  restartText: {fileID: 0}
+  explosion: {fileID: 0}
 --- !u!212 &212660135305541102
 SpriteRenderer:
   m_ObjectHideFlags: 1

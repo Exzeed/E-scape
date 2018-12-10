@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour {
 
     public int speed = 1;
     public int jumpPower = 50;
-    public float distanceToBottomofPlayer = 1.2f;
+    public float distToPlayerBot = 1.25f;
     public bool grounded;
+    public GameObject explosion;
 
     private float moveX;
 
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour {
     {
         PlayerMove();
         PlayerRaycast();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
 	}
 
     void PlayerMove()
@@ -61,11 +65,11 @@ public class PlayerController : MonoBehaviour {
         grounded = false;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D other)
     {
         //Debug.Log("Collided with " + collision.collider.name);
         //when player is on an object tagged as "Platform" bool = true
-       if (collision.gameObject.tag == "Platform")
+       if (other.gameObject.tag == "Platform")
             grounded = true;
     }
 
@@ -73,17 +77,48 @@ public class PlayerController : MonoBehaviour {
     {
         //shoots a ray downwards
         RaycastHit2D rayDown = Physics2D.Raycast(transform.position, Vector2.down);
+        RaycastHit2D rayDownRight = Physics2D.Raycast(transform.position + (transform.right * 0.7f), Vector2.down);
+        RaycastHit2D rayDownLeft = Physics2D.Raycast(transform.position - (transform.right * 0.7f), Vector2.down);
 
-        if(rayDown.collider != null && rayDown.distance < distanceToBottomofPlayer && rayDown.collider.tag == "Enemy")
+
+        if (rayDown.collider != null && rayDown.distance < distToPlayerBot && rayDown.collider.tag == "Enemy")
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 150);
-            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
-            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
-            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
-            rayDown.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            rayDown.collider.gameObject.GetComponent<EnemyController>().enabled = false;
-
+            GameObject other = rayDown.collider.gameObject;
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 100);
+            Instantiate(explosion, other.transform.position, other.transform.rotation);
+            other.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
+            other.GetComponent<Rigidbody2D>().gravityScale = 3;
+            other.GetComponent<Rigidbody2D>().freezeRotation = false;
+            other.GetComponent<BoxCollider2D>().enabled = false;
+            other.GetComponent<EnemyController>().enabled = false;
+            GetComponent<PlayerScore>().playerScore += 50;
             //Destroy (hit.collider.gameObject);
+        }
+
+        if (rayDownRight.collider != null && rayDownRight.distance < distToPlayerBot && rayDownRight.collider.tag == "Enemy")
+        {
+            GameObject other = rayDownRight.collider.gameObject;
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 100);
+            Instantiate(explosion, other.transform.position, other.transform.rotation);
+            other.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
+            other.GetComponent<Rigidbody2D>().gravityScale = 3;
+            other.GetComponent<Rigidbody2D>().freezeRotation = false;
+            other.GetComponent<BoxCollider2D>().enabled = false;
+            other.GetComponent<EnemyController>().enabled = false;
+            GetComponent<PlayerScore>().playerScore += 50;
+        }
+
+        if (rayDownLeft.collider != null && rayDownLeft.distance < distToPlayerBot && rayDownLeft.collider.tag == "Enemy")
+        {
+            GameObject other = rayDownLeft.collider.gameObject;
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 100);
+            Instantiate(explosion, other.transform.position, other.transform.rotation);
+            other.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
+            other.GetComponent<Rigidbody2D>().gravityScale = 3;
+            other.GetComponent<Rigidbody2D>().freezeRotation = false;
+            other.GetComponent<BoxCollider2D>().enabled = false;
+            other.GetComponent<EnemyController>().enabled = false;
+            GetComponent<PlayerScore>().playerScore += 50;
         }
 
         /* if (rayDown.collider != null && rayDown.distance < distanceToBottomofPlayer && rayDown.collider.tag == "Platform")
