@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4019855956344712}
   - component: {fileID: 212660135305541102}
-  - component: {fileID: 95370995816804224}
   - component: {fileID: 61708508696400714}
   - component: {fileID: 50685771693032592}
   - component: {fileID: 114120414220873736}
   - component: {fileID: 114840097853196282}
   - component: {fileID: 114464238064922512}
+  - component: {fileID: 95317394831625080}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859642496719856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -1.85, z: 0}
+  m_LocalPosition: {x: -2, y: -1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,7 +91,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.092279, y: 2.2788951}
   m_EdgeRadius: 0
---- !u!95 &95370995816804224
+--- !u!95 &95317394831625080
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
   jumpPower: 380
   distToPlayerBot: 1.25
   grounded: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 1044728376080116, guid: 83e3bed3b49e96c458f0f17974100795, type: 2}
 --- !u!114 &114464238064922512
 MonoBehaviour:
   m_ObjectHideFlags: 1

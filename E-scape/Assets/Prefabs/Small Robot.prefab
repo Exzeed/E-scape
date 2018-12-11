@@ -124,6 +124,7 @@ MonoBehaviour:
   restart: 0
   endText: {fileID: 0}
   restartText: {fileID: 0}
+  explosion: {fileID: 1044728376080116, guid: 83e3bed3b49e96c458f0f17974100795, type: 2}
 --- !u!212 &212764497169018742
 SpriteRenderer:
   m_ObjectHideFlags: 1

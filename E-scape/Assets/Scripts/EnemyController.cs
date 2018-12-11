@@ -23,11 +23,13 @@ public class EnemyController : MonoBehaviour {
             Flip();
             if (hit.collider.tag == "Player")
             {
-                hit.collider.gameObject.GetComponent<PlayerScore>().pauseTime = true;
+                GameObject other = hit.collider.gameObject;
+                Instantiate(explosion, other.transform.position, other.transform.rotation);
+                other.GetComponent<PlayerScore>().pauseTime = true;
                 endText.color = Color.red;
                 endText.text = "Game Over";
-                hit.collider.gameObject.GetComponent<PlayerController>().enabled = false;
-                hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                other.GetComponent<PlayerController>().enabled = false;
+                other.GetComponent<BoxCollider2D>().enabled = false;
                 SpriteRenderer mySpriteRenderer = hit.collider.GetComponent<SpriteRenderer>();
                 mySpriteRenderer.sortingLayerName = "Default";
                 restart = true;

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject explosion;
 
     private float moveX;
+    private bool jump;
 
 	// Update is called once per frame
 	void Update ()
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour {
     {
         //controls
         moveX = Input.GetAxis("Horizontal");
+        jump = Input.GetButtonDown("Jump");
         //Triggers function when Unity's "Jump" key is pushed
         if (Input.GetButtonDown ("Jump") && grounded == true)
         {
@@ -33,15 +35,25 @@ public class PlayerController : MonoBehaviour {
         }
 
         //animations
-        if (moveX != 0 && (grounded == true)) //when x-value is changing
+        if (moveX != 0 && jump == false && (grounded == true)) //when x-value is changing
         {
             GetComponent<Animator>().SetBool("isRunning", true);
+            GetComponent<Animator>().SetBool("isJumping", false);
+        }
+
+        else if (jump == true)
+        {
+            GetComponent<Animator>().SetBool("isJumping", true);
+            GetComponent<Animator>().SetBool("isRunning", false);
         }
 
         else
         {
             GetComponent<Animator>().SetBool("isRunning", false);
+            GetComponent<Animator>().SetBool("isJumping", false);
         }
+
+
 
         //player direction
         if (moveX < 0.0f)
@@ -77,14 +89,14 @@ public class PlayerController : MonoBehaviour {
     {
         //shoots a ray downwards
         RaycastHit2D rayDown = Physics2D.Raycast(transform.position, Vector2.down);
-        RaycastHit2D rayDownRight = Physics2D.Raycast(transform.position + (transform.right * 0.7f), Vector2.down);
-        RaycastHit2D rayDownLeft = Physics2D.Raycast(transform.position - (transform.right * 0.7f), Vector2.down);
+        RaycastHit2D rayDownRight = Physics2D.Raycast(transform.position + (transform.right * 0.5f), Vector2.down);
+        RaycastHit2D rayDownLeft = Physics2D.Raycast(transform.position - (transform.right * 0.5f), Vector2.down);
 
 
         if (rayDown.collider != null && rayDown.distance < distToPlayerBot && rayDown.collider.tag == "Enemy")
         {
             GameObject other = rayDown.collider.gameObject;
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 100);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 150);
             Instantiate(explosion, other.transform.position, other.transform.rotation);
             other.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
             other.GetComponent<Rigidbody2D>().gravityScale = 3;
