@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Die ()
     {
+        gameObject.GetComponent<AudioSource>().enabled = true;
         gameObject.GetComponent<PlayerScore>().pauseTime = true;
         endText.color = Color.red;
         endText.text = "Game Over";

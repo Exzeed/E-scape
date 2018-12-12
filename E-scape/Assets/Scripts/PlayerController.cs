@@ -89,8 +89,8 @@ public class PlayerController : MonoBehaviour {
     {
         //shoots a ray downwards
         RaycastHit2D rayDown = Physics2D.Raycast(transform.position, Vector2.down);
-        RaycastHit2D rayDownRight = Physics2D.Raycast(transform.position + (transform.right * 0.5f), Vector2.down);
-        RaycastHit2D rayDownLeft = Physics2D.Raycast(transform.position - (transform.right * 0.5f), Vector2.down);
+        RaycastHit2D rayDownRight = Physics2D.Raycast(transform.position + (transform.right * 0.65f), Vector2.down);
+        RaycastHit2D rayDownLeft = Physics2D.Raycast(transform.position - (transform.right * 0.65f), Vector2.down);
 
 
         if (rayDown.collider != null && rayDown.distance < distToPlayerBot && rayDown.collider.tag == "Enemy")
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour {
             other.GetComponent<Rigidbody2D>().freezeRotation = false;
             other.GetComponent<BoxCollider2D>().enabled = false;
             other.GetComponent<EnemyController>().enabled = false;
-            GetComponent<PlayerScore>().playerScore += 50;
+            GetComponent<PlayerScore>().playerScore += 70;
             //Destroy (hit.collider.gameObject);
         }
 
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour {
             other.GetComponent<Rigidbody2D>().freezeRotation = false;
             other.GetComponent<BoxCollider2D>().enabled = false;
             other.GetComponent<EnemyController>().enabled = false;
-            GetComponent<PlayerScore>().playerScore += 50;
+            GetComponent<PlayerScore>().playerScore += 60;
         }
 
         if (rayDownLeft.collider != null && rayDownLeft.distance < distToPlayerBot && rayDownLeft.collider.tag == "Enemy")

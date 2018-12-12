@@ -24,6 +24,7 @@ public class EnemyController : MonoBehaviour {
             if (hit.collider.tag == "Player")
             {
                 GameObject other = hit.collider.gameObject;
+                other.GetComponent<AudioSource>().enabled = true;
                 Instantiate(explosion, other.transform.position, other.transform.rotation);
                 other.GetComponent<PlayerScore>().pauseTime = true;
                 endText.color = Color.red;

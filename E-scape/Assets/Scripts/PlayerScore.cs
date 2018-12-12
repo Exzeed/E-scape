@@ -35,6 +35,7 @@ public class PlayerScore : MonoBehaviour {
 
 
         if (timeLeft < 0.1f){
+            gameObject.GetComponent<AudioSource>().enabled = true;
             Instantiate(explosion, this.transform.position, this.transform.rotation);
             pauseTime = true;
             endText.color = Color.red;
@@ -62,6 +63,7 @@ public class PlayerScore : MonoBehaviour {
     {
         if (trigger.gameObject.tag == "Exit")
         {
+            trigger.gameObject.GetComponent<AudioSource>().enabled = true;
             pauseTime = true;
             endText.text = "Level Cleared!";
             gameObject.GetComponent<PlayerController>().enabled = false;
